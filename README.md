@@ -2,7 +2,6 @@
 ![Forensics](https://img.shields.io/badge/Digital_Forensics-Autopsy_|_Volatility_|_Cellebrite-blue)
 ![Security](https://img.shields.io/badge/Cybersecurity-Incident_Response-red)
 
-**Created by Abdullah Al Mamun**
 
 Welcome to this hands-on digital forensics project! This repository contains a comprehensive, court-ready forensic investigation that spans three major domains of digital forensics: **Disk Forensics**, **Volatile Memory (RAM) Forensics**, and **Mobile Device Forensics**.
 
@@ -82,3 +81,9 @@ The final step in any forensic tutorial is tying the evidence together into a un
 For a complete breakdown of the findings, timeline reconstructions, and threat severity assessments, please review the **[Full Forensic Report](./End-to-End%20Digital%20Forensics%20Investigation%20-%20Disk,%20Memory,%20Malware%20&%20Mobile%20Forensics.pdf)**.
 
 ---
+
+**Created by Abdullah Al Mamun**<br>
+BSc, MSc - Software Engineering<br>
+TU Wien (Vienna, Austria) & Daffodil International University<br>
+Email: mamun.swe.de@gmail.com | GitHub: [abbysweb](https://github.com/abbysweb)<br>
+ORCID: [0009-0006-7473-0024](https://orcid.org/0009-0006-7473-0024)
