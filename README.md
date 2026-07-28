@@ -82,6 +82,8 @@ For a complete breakdown of the findings, timeline reconstructions, and threat s
 
 ---
 
+> **Disclaimer:** This project and the methodologies described within are strictly for educational and portfolio purposes. All data, suspects, and investigations are simulated.
+
 **Created by Abdullah Al Mamun**<br>
 BSc, MSc - Software Engineering<br>
 TU Wien (Vienna, Austria) & Daffodil International University<br>
