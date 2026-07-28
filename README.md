@@ -1,4 +1,6 @@
 # End-to-End Digital Forensics Investigation: A Practical Tutorial
+![Forensics](https://img.shields.io/badge/Digital_Forensics-Autopsy_|_Volatility_|_Cellebrite-blue)
+![Security](https://img.shields.io/badge/Cybersecurity-Incident_Response-red)
 
 Welcome to this hands-on digital forensics project! This repository contains a comprehensive, court-ready forensic investigation that spans three major domains of digital forensics: **Disk Forensics**, **Volatile Memory (RAM) Forensics**, and **Mobile Device Forensics**.
 
@@ -11,6 +13,14 @@ If you are a student, cybersecurity enthusiast, or aspiring forensic investigato
 
 ## 🎯 Project Objective
 The objective of this investigation is to triage and analyze a compromised system belonging to a suspect ("Peter"). The goal is to uncover evidence of corporate espionage (intellectual property theft), active malware infections (RATs), and communications related to an illicit stolen vehicle trafficking ring.
+
+---
+
+## 🛡️ Skills Demonstrated
+- **Disk Forensics:** File carving, registry analysis, timeline reconstruction (Autopsy).
+- **Volatile Memory Analysis:** Live process extraction, network connection mapping, credential dumping (Volatility 3).
+- **Mobile Forensics:** EXIF metadata extraction, encrypted app identification, messaging timeline correlation (Cellebrite).
+- **Compliance & Integrity:** Chain of Custody documentation, cryptographic hash verification (SHA-256), adherence to ACPO and SWGDE digital evidence guidelines.
 
 ---
 
@@ -39,7 +49,18 @@ This project follows a strict forensic workflow that adheres to ACPO and SWGDE d
 1. **Integrity Check:** Always start by generating a SHA-256 hash of your `.raw` dump to ensure evidence integrity.
 2. **Process Analysis:** Run `windows.pslist` to view all active processes. Look for anomalies, such as `tor.exe` running unexpectedly.
 3. **Network Connections:** Use `windows.netstat.NetStat` to view active connections. Cross-reference established IPs to identify Command and Control (C2) servers.
+   ```bash
+   # Extracting active network connections from the physical memory dump
+   python vol.py -f physmem.raw windows.netstat.NetStat
+   ```
 4. **Credential Extraction:** Use the `hashdump` plugin to extract NTLM password hashes from memory. Crack them using John the Ripper (e.g., `john --format=NT hash.txt --wordlist=rockyou.txt`).
+   ```bash
+   # Dumping NTLM hashes for password cracking
+   vol.py -f physmem.raw --profile=Win7SP1x64 hashdump
+   
+   # Cracking the extracted hashes
+   john --format=NT hash.txt --wordlist=rockyou.txt
+   ```
 
 ### Phase 3: Mobile Device Forensics (Cellebrite)
 **Goal:** Parse a smartphone extraction (`.ufdr`) to reconstruct communication timelines and geolocation data.
