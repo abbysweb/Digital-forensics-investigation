@@ -5,7 +5,7 @@ Welcome to this hands-on digital forensics project! This repository contains a c
 If you are a student, cybersecurity enthusiast, or aspiring forensic investigator, this project serves as a practical tutorial on how to approach a multi-faceted digital crime scene.
 
 ## 📄 Full Investigation Report
-**[👉 Click here to read the full 49-page Forensic Investigation Report (PDF)](./End-to-End%20Digital%20Forensics%20Investigation%20-%20Disk,%20Memory,%20Malware%20&%20Mobile%20Forensics.pdf)**
+**[👉 Click here to read the full Report (PDF)](./End-to-End%20Digital%20Forensics%20Investigation%20-%20Disk,%20Memory,%20Malware%20&%20Mobile%20Forensics.pdf)**
 
 ---
 
